@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e
+
+[ "$DEBUG" == 'true' ] && set -x
+
+cat << EOF
+  DATABASE_HOST = IP
+  DATABASE_PORT = Port
+  DATABASE_USER = SUPERUSER privileges
+  DATABASE_PASS = Password
+  DATABASE_NAME = Database
+
+  Please choose a command:
+     psql - PostgreSQL client
+     vacuum <databases>
+EOF
